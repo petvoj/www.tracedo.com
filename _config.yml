@@ -18,21 +18,70 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Tracedo - mobile shipment tracking
+name: Tracedo
+email: hello@tracedo.com
+url: https://www.tracedo.com
+copyright: Tracedo s.r.o.
+owner: Tracedo s.r.o.
+telephone: +420 777 211 754
+baseurl: /
+google_analytics: UA-86495639-1
+
+# Handling Reading
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/tracedo
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Tracedo s.r.o.
+  - line: Dalimilova 579/5
+  - line: 130 00 Praha 3
 
 # Build settings
-theme: minima
+markdown: kramdown
+permalink: pretty
+highlighter: pygments
+
+# Collections
+collections:
+    modules:
+        output: true
+    features:
+        output: true
+    benefits:
+        output: true
+    customers:
+        output: true
+    tour:
+        output: true
+
+# Plugins
 plugins:
   - jekyll-feed
+
+# SaaS
+sass:
+  style: compressed
+
+assets:
+  source_maps: true
+  destination: "/assets"
+  compression: false
+  gzip: false
+  defaults:
+    integrity:
+      {css,img,js}: false
+  sources:
+    - _assets/custom
+  plugins:
+    css: { autoprefixer: {} }
+    img: { optim: {} }
 
 # Exclude from processing.
 # The following items will not be processed, by default.

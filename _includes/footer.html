@@ -1,0 +1,25 @@
+<footer class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+
+                <p>
+                    &copy; {{ site.time | date: '%Y' }} 
+                    {% for address in site.address %} 
+                    {{ address.line }}
+                    {% endfor %} | 
+                    <a href="/privacy">Privacy Policy</a>
+                </p>
+
+                {% if jekyll.environment == 'development' %}
+                <p>ENV: Development</p>
+                {% endif %}
+
+                {% if jekyll.environment == 'test' %}
+                <p>ENV: Test</p>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</footer>

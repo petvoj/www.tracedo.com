@@ -1,0 +1,21 @@
+<section id="customers" class="section customers {{include.class}}">
+    <div class="container text-center">
+
+        <h2>Our customers</h2>
+
+        <div class="row">
+
+            {% for customer in site.customers limit:3%}
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <div class="customer">
+                    <img src="{{customer.logo}}" width="250"/>
+                    <p>{{customer.content}}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+    </div>
+</section>
